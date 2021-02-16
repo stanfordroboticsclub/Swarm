@@ -1,0 +1,13 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=sudo /usr/bin/python3 -u monitor_battery.py
+WorkingDirectory=/home/pi/Swarm
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
