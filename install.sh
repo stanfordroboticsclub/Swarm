@@ -3,6 +3,10 @@
 FOLDER=$(dirname $(realpath "$0"))
 cd $FOLDER
 
+# turns on i2c and installs some utilities
+sudo raspi-config nonint do_i2c 1
+sudo apt-get install -y i2c-tools
+
 # libraries to interface with the ADC and IMU respectivly
 yes | sudo pip3 install adafruit-circuitpython-ads1x15
 yes | sudo pip3 install adafruit-circuitpython-mpu6050
