@@ -8,7 +8,7 @@ sudo apt install -y git vim screen python3-pip
 yes | sudo pip3 install --upgrade pip
 
 # turns on i2c and installs some utilities
-sudo raspi-config nonint do_i2c 1
+sudo raspi-config nonint do_i2c 0
 sudo apt-get install -y i2c-tools
 
 # libraries to interface with the ADC and IMU respectivly
