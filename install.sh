@@ -29,4 +29,4 @@ done
 sudo systemctl daemon-reload
 sudo systemctl enable monitor_battery # starts program on boot
 sudo systemctl enable pigpiod # starts program on boot
-
+sudo systemctl enable zerotier-one
